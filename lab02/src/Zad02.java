@@ -33,7 +33,7 @@ public class Zad02 {
      * @param list the list
      * @return execution time (milliseconds)
      */
-    public static long measureAdditionTime(List<Integer> list) {
+    private static long measureAdditionTime(List<Integer> list) {
         long startTime = System.currentTimeMillis();
         int n = 10000;
 
@@ -52,7 +52,7 @@ public class Zad02 {
      * @param list the list
      * @return execution time (nanoseconds)
      */
-    public static long measureRemovalTime(List<Integer> list) {
+    private static long measureRemovalTime(List<Integer> list) {
         int indexToRemove = list.size()/2;
 
         long startTime = System.nanoTime();
@@ -70,7 +70,7 @@ public class Zad02 {
      * @param list the list
      * @return execution time (nanoseconds)
      */
-    public static long measureModifyingTime(List<Integer> list) {
+    private static long measureModifyingTime(List<Integer> list) {
         int indexToModify = list.size()/2;
         int newValue = 13214214;
 
@@ -90,7 +90,7 @@ public class Zad02 {
      * @param timeUnit      the time unit
      * @param list          the list
      */
-    public static void printResults(long executionTime, TimeVariant timeUnit, ListVariant list) {
+    private static void printResults(long executionTime, TimeVariant timeUnit, ListVariant list) {
         String displayTimeWihUnit = switch (timeUnit) {
             case MILLIS -> executionTime + "ms";
             case NANO -> executionTime + "ns";
