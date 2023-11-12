@@ -19,12 +19,11 @@ public class ColorChanger extends JFrame {
     }
 
     public ColorChanger() {
-        setWindow();
-
         colorInputField = createInputField();
         changeColorButton = new JButton("Zmień Kolor");
         colorPanel = new JPanel();
 
+        setWindow();
         setupLayout();
         handleButtonClick();
     }
@@ -76,7 +75,6 @@ public class ColorChanger extends JFrame {
         }
 
     }
-
     private  Color getColor() {
         String colorName = colorInputField.getText().toLowerCase();
         Color colorToSet;
