@@ -38,6 +38,11 @@ public class Zad01 {
     private static String[] getInputData() {
         Scanner scanner = new Scanner(System.in);
 
+        try {
+
+        } catch (Exception e) {
+            System.out.println("Nieprawidlowe dane");
+        }
         System.out.println("Wprowadz ciag liczb oddzielonych spacja: ");
         String input = scanner.nextLine();
 
