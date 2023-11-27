@@ -1,18 +1,15 @@
-package km.zad2;
+package km.zad4;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyAdapter;
 
 class MoveFigureApp extends JFrame {
     private DrawingPanel drawingPanel;
-
     private final int width = 400;
     private final int height = 400;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new MoveFigureApp().setVisible(true);
             }
@@ -29,6 +26,7 @@ class MoveFigureApp extends JFrame {
         setTitle(title);
         setSize(width, height);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
